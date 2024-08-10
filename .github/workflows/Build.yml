@@ -171,7 +171,7 @@ jobs:
       with:
         name: R${{ env.DATE }} for ${{ env.FIRMWARE_TAG }}
         allowUpdates: false
-        tag: ${{ env.FIRMWARE_TAG }}-${{ env.DATE }}
+        tag: ${{ env.FIRMWARE_TAG }}-$(date +"%Y%m%d-%H%M%S")
         token: ${{ secrets.GITHUB_TOKEN }}
         artifacts: ${{ env.FIRMWARE_PATH }}/*
         body: |
