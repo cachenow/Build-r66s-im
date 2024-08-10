@@ -165,13 +165,18 @@ jobs:
         name: ${{ env.SOURCE_REPO }}-firmware-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}-${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE_PATH }}
 
+    - name: Generate release tag
+      id: tag
+      run: |
+        echo "release_tag=${{ env.FIRMWARE_TAG }}-$(date +"%Y%m%d%H%M")" >> $GITHUB_OUTPUT
+
     - name: Upload Firmware To Release
       if: steps.compile.outputs.status == 'success' && env.FIRMWARE_RELEASE == 'true'
       uses: ncipollo/release-action@v1
       with:
         name: R${{ env.DATE }} for ${{ env.FIRMWARE_TAG }}
         allowUpdates: false
-        tag: ${{ env.FIRMWARE_TAG }}-$(date +"%Y%m%d-%H%M%S")
+        tag: ${{ steps.tag.outputs.release_tag }}
         token: ${{ secrets.GITHUB_TOKEN }}
         artifacts: ${{ env.FIRMWARE_PATH }}/*
         body: |
