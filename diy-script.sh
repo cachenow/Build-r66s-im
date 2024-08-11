@@ -8,7 +8,7 @@ sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.
 
 # 移除要替换的包
 rm -rf feeds/packages/net/mosdns
-rm -rf feeds/packages/net/msd_lite
+# rm -rf feeds/packages/net/msd_lite
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/packages/net/ddns-go
 rm -rf feeds/luci/themes/luci-theme-argon
@@ -37,7 +37,7 @@ git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFil
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
 git clone --depth=1 https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
 git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser
-git_sparse_clone master https://github.com/syb999/openwrt-23.05.3 package/network/services/msd_lite
+# git_sparse_clone master https://github.com/syb999/openwrt-23.05.3 package/network/services/msd_lite
 git_sparse_clone openwrt-23.05 https://github.com/openwrt/packages net/tailscale
 
 # 添加rtl88x2bu驱动
@@ -70,8 +70,8 @@ git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go  package/luci-app-ddns-go
 
 # msd_lite
-git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
-git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
+# git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
+# git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
 
 # MosDNS
 git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
