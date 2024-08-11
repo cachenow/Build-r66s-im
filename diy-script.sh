@@ -36,7 +36,7 @@ git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/
 git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
 git clone --depth=1 https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
-git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
+git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser
 git_sparse_clone master https://github.com/syb999/openwrt-23.05.3 package/network/services/msd_lite
 git_sparse_clone openwrt-23.05 https://github.com/openwrt/packages net/tailscale
 
@@ -57,7 +57,7 @@ sed -i '
         <div><%= ver.distversion %></div>\
     </div>\
 </footer>
-' feeds/luci/themes/luci-theme-argon/luasrc/view/themes/argon/footer_login.htm
+' package/luci-theme-argon/luasrc/view/themes/argon/footer_login.htm
 
 # SmartDNS
 git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
