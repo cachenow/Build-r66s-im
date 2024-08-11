@@ -47,6 +47,18 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/l
 git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
 git_sparse_clone main https://github.com/haiibo/packages luci-theme-atmaterial luci-theme-opentomcat luci-theme-netgear
 
+# 修改Argon登录页footer信息呈现格式
+sed -i '
+/<footer>/,/<\/footer>/ c\
+<footer>\
+    <div style="text-align: center; word-wrap: break-word; overflow-wrap: break-word;">\
+        <div><a class="luci-link" href="https://github.com/openwrt/luci" target="_blank">Powered by <%= ver.luciname %><br>(<%= ver.luciversion %>)</a></div>\
+        <div><a href="https://github.com/jerrykuku/luci-theme-argon" target="_blank">ArgonTheme <%# vPKG_VERSION %></a></div>\
+        <div><%= ver.distversion %></div>\
+    </div>\
+</footer>
+' feeds/luci/themes/luci-theme-argon/luasrc/view/themes/argon/footer_login.htm
+
 # SmartDNS
 git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
