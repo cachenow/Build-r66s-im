@@ -41,7 +41,7 @@ git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebro
 git_sparse_clone openwrt-23.05 https://github.com/openwrt/packages net/tailscale
 
 # 添加rtl88x2bu驱动
-git clone --branch v1.1.2 https://github.com/mirobiala/rtl88x2bu-cl package/kernel/rtl88x2bu-cl
+# git clone --branch v1.1.2 https://github.com/mirobiala/rtl88x2bu-cl package/kernel/rtl88x2bu-cl
 
 # Themes
 git clone --depth=1 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
