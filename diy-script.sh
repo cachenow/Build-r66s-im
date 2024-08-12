@@ -43,6 +43,9 @@ git_sparse_clone openwrt-23.05 https://github.com/openwrt/packages net/tailscale
 # 添加rtl88x2bu驱动
 # git clone --branch v1.1.2 https://github.com/mirobiala/rtl88x2bu-cl package/kernel/rtl88x2bu-cl
 
+# 添加rtw88驱动
+git clone https://github.com/henkv1/rtw88-usb-openwrt package/kernel/rtw88-usb
+
 # Themes
 git clone --depth=1 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
 git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
