@@ -47,7 +47,7 @@ git_sparse_clone openwrt-23.05 https://github.com/openwrt/packages net/tailscale
 # git clone https://github.com/henkv1/rtw88-usb-openwrt package/kernel/rtw88-usb
 
 # 添加rtw88-oot驱动
-git_sparse_clone istoreos-22.03 https://github.com/istoreos/istoreos package/kernel/rtw88-oot
+# git_sparse_clone istoreos-22.03 https://github.com/istoreos/istoreos package/kernel/rtw88-oot
 
 # Themes
 git clone --depth=1 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
